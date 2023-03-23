@@ -3,7 +3,7 @@ Laravel/public/build
 Laravel/public/hot
 Laravel/public/storage
 Laravel/storage/*.key
-Laravel/vendor
+Laravel/public/vendor
 Laravel/.env
 Laravel/.env.backup
 Laravel/.env.production
