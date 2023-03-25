@@ -1,23 +1,22 @@
 <?php
 
+require_once 'MigrationHelper.php';
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCleanDataSamples extends Migration
+return new class extends Migration
 {
     public function up()
     {
-        Schema::create('clean_data_samples', function (Blueprint $table) {
-            $table->id();
-            $table->text('review');
-            $table->text('processed_review');
-            $table->enum('label', ['1', '0']);
+        Schema::create('clean_sample_data', function (Blueprint $table) {
+            MigrationHelper::createSampleTable($table);
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('clean_sample_data');
     }
 };

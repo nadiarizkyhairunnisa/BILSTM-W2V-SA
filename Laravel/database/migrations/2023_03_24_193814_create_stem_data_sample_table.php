@@ -1,20 +1,22 @@
 <?php
-// Child migration
+
+require_once 'MigrationHelper.php';
+
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-class CreateAnotherTable extends Migration
+return new class extends Migration
 {
-    protected $tableName = 'stem_data_samples';
-
-    // This extends the base migration
     public function up()
     {
-        parent::up();
+        Schema::create('stem_sample_data', function (Blueprint $table) {
+            MigrationHelper::createSampleTable($table);
+        });
     }
 
-    // This extends the base migration
     public function down()
     {
-        parent::down();
+        Schema::dropIfExists('stem_sample_data');
     }
-}
+};
