@@ -15,6 +15,3 @@ Laravel/auth.json
 Laravel/npm-debug.log
 Laravel/yarn-error.log
 Python/resources/models
-/.fleet
-/.idea
-/.vscode
