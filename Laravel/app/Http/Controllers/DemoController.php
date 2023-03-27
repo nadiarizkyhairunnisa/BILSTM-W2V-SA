@@ -39,32 +39,5 @@ class DemoController extends Controller
         $title = "Demo";
         return view('pages.demo')->with(compact('content', 'title'));
         // return view('pages.demo', compact('contentJSON', 'title'));
-        // return response()->json($contentJSON);
     }
 }
-
-        // // Get the HTML markup for the view
-        // $html = $view->render();
-
-        // // Return the HTML markup as a response
-        // return $html;
-
-
-        // $data = [
-        //     "title" => "Demo",
-        //     "model" => $contentJSON->model,
-        //     "preproc" => $contentJSON->preproc,
-        //     "result" => $contentJSON->result,
-        //     "ulasan" => $contentJSON->ulasan,
-        // ];
-
-        // Return the response content
-        // return response($content);
-
-        // return view('pages.demo')->with([
-        //     "title" => "Demo",
-        //     "model" => $contentJSON->model,
-        //     "preproc" => $contentJSON->preproc,
-        //     "result" => $contentJSON->result,
-        //     "ulasan" => $contentJSON->ulasan,
-        // ]);
