@@ -3,7 +3,6 @@ Laravel/public/build
 Laravel/public/hot
 Laravel/public/storage
 Laravel/storage/*.key
-Laravel/public/vendor
 Laravel/vendor
 Laravel/.env
 Laravel/.env.backup
@@ -14,6 +13,5 @@ Laravel/Homestead.yaml
 Laravel/auth.json
 Laravel/npm-debug.log
 Laravel/yarn-error.log
-
 Python/app/__pycache__
 Python/resources/models
