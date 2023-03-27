@@ -83,27 +83,25 @@
             baca, angka, emoji, dan spasi yang berlebihan. Berikut
             beberapa sampel datanya.
         </p>
-        <div id="samples_preproc_opt_1" name="samples_preproc_opt_1">
-            <div id="samples_preproc_opt_1" name="samples_preproc_opt_1">
-                <table>
-                    <thead>
+        <div id="data_table" name="data_table">
+            <table class="table table-bordered" id="dataTable">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Review</th>
+                        <th>Processed Review</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($clean_data_samples as $row)
                         <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Email</th>
+                            <td>{{ $row->No }}</td>
+                            <td>{{ $row->Review }}</td>
+                            <td>{{ $row->{'Processed Review'} }}</td>
                         </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($clean_data_samples as $row)
-                            <tr>
-                                <td>{{ $row->No }}</td>
-                                <td>{{ $row->Review }}</td>
-                                <td>{{ $row->{'Processed Review'} }}</td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
     </x-card>
     <!-- End of Second Card -->
