@@ -4,11 +4,11 @@ use Illuminate\Database\Schema\Blueprint;
 
 class MigrationHelper
 {
-    public static function createSampleTable(Blueprint $table)
+    public static function createDataSampleTable(Blueprint $table)
     {
-        $table->id();
-        $table->text('review');
-        $table->text('processed_review');
-        $table->enum('label', ['1', '0']);
+        $table->id('No');
+        $table->text('Review');
+        $table->text('Processed Review');
+        $table->enum('Label', ['1', '0']);
     }
 }
