@@ -14,5 +14,6 @@ Laravel/Homestead.yaml
 Laravel/auth.json
 Laravel/npm-debug.log
 Laravel/yarn-error.log
-Python/resources/models
+
 Python/app/__pycache__
+Python/resources/models
