@@ -83,26 +83,7 @@
             baca, angka, emoji, dan spasi yang berlebihan. Berikut
             beberapa sampel datanya.
         </p>
-        <div id="data_table" name="data_table">
-            <table class="table table-bordered" id="dataTable">
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Review</th>
-                        <th>Processed Review</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($clean_data_samples as $row)
-                        <tr>
-                            <td>{{ $row->No }}</td>
-                            <td>{{ $row->Review }}</td>
-                            <td>{{ $row->{'Processed Review'} }}</td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
+        <x-table :headers="['No', 'Review', 'Processed Review', 'Label']" :data="$clean_data_samples" />
     </x-card>
     <!-- End of Second Card -->
 
@@ -131,7 +112,7 @@
             untuk mendapatkan akar kata, peneliti juga menggunakan
             pustaka Sastrawi untuk melakukan proses ini.
         </p>
-        <div id="samples_preproc_opt_2" name="samples_preproc_opt_2"></div>
+        <x-table :headers="['No', 'Review', 'Processed Review', 'Label']" :data="$stem_data_samples" />
     </x-card> <!-- End of Third Card -->
 @endsection
 
