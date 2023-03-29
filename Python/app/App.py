@@ -94,18 +94,6 @@ class App:
 
         return {"data_path":data_path}
 
-    @app.route('/dataset', methods=["GET", "POST"]) 
-    def getSampleData():
-        data_option = request.form.get("data_option")
-        print("DATA OPTION VALUES: ", data_option)
-
-        if data_option == "data_table":
-            data_path = "Python/resources/samples/data_clean_sample_final.csv"
-        else:
-            data_path = "Python/resources/samples/data_stem_sample_final.csv"
-
-        return {"data_path":data_path}
-
 
     if __name__ == '__main__':
         app.run(debug=True)
