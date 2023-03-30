@@ -48,7 +48,7 @@ $ cp .env.example .env
 $ php artisan key:generate
 ```
 
-To run this project, you need to set `DB_DATABASE` variable to your `.env` file
+To run this project, you need to set `DB_DATABASE` variable to your `.env` file. Change other variables to sync with your database configuration.
 
 ### Running
 
