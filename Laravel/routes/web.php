@@ -11,3 +11,4 @@ Route::get('/dataset', [DatasetController::class, 'index'])->name('dataset');
 Route::get('/demo', [DemoController::class, 'index'])->name('demo');
 Route::post('/demo', [DemoController::class, 'getData'])->name('demo.post');
 Route::get('/modeling', [ModelingController::class, 'index'])->name('modeling');
+Route::post('/modeling', [ModelingController::class, 'getTableData'])->name('modeling.post');
