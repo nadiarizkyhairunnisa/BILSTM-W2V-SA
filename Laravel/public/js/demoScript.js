@@ -10,8 +10,10 @@ $(document).ready(function () {
                 var specificPart = parsedResponse.find("#result");
                 $("#result").html(specificPart);
             },
-            error: function (xhr) {
-                console.error(xhr.responseText);
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.error(jqXHR);
+                console.error(textStatus);
+                console.error(errorThrown);
             },
         });
     });
