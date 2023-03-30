@@ -91,7 +91,7 @@
     {{-- Second Card --}}
     <x-card>
         <x-slot name="title">
-            Konfigurasi Dataset
+            Konfigurasi Model
         </x-slot>
         <div class="row">
             <div class="paragraph col-lg-12 col-12">
@@ -190,23 +190,26 @@
         <x-slot name="title">
             Hasil Pelatihan dan Pengujian Model
         </x-slot>
-        <div class="row">
+        <div class="row" data-modelingURL="{{ route('modeling.post') }}">
             <x-img> img/metric_base_clean.png </x-img>
             <x-img> img/loss_base_clean.png </x-img>
         </div>
         <div align="center">
-            <button type="button" class="btn btn-dark" name="load_data" id="load_data" value="base_clean_train,data_table">
+            <button type="button" class="btn btn-dark" value="base_clean_train_evaluation">
                 Training Result
             </button>
-            <button type="button" class="btn btn-dark" name="load_data" id="load_data_2"
-                value="base_clean_test,data_table">
+            <button type="button" class="btn btn-dark" value="base_clean_test_evaluation,data_table">
                 Testing Result
             </button>
             <button type="reset" class="btn btn-light" name="hide" id="hide" value="data_table">
                 Hide
             </button>
         </div>
-        <div id="data_table"></div>
+        <div id="data_table">
+            @if (isset($tableData))
+                <x-table :headers="['Epoch', 'Loss', 'Accuracy', 'F1', 'Score', 'Precision', 'Recall', 'TP', 'TN', 'FP', 'FN']" :data="$tableData" />
+            @endif
+        </div>
         <hr />
         <!-- END OF BASE CLEAN -->
         <!-- BASE STEM -->
@@ -432,5 +435,5 @@
 @endsection
 
 @section('script')
-    <script src="js/modelingScript.js"></script>
+    <script src="js/modelingScript2.js"></script>
 @endsection
