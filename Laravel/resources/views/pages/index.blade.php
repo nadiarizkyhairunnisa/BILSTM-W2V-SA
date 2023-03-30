@@ -45,7 +45,7 @@
     <!-- Second Card -->
     <x-card>
         <x-slot name="title">
-            Abstrak Penelitian
+            Deskripsi Penelitian
         </x-slot>
         <div class="imagescaled">
             <img src="img/research-pipeline_final.png" class="center" />
