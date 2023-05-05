@@ -5,6 +5,8 @@ from Modeling import Modeling
 from DataReader import DataReader
 from keras.models import load_model
 from flask_cors import CORS
+import re, pandas
+
 
 class App:
 
@@ -43,7 +45,6 @@ class App:
             print("finsihed word correction: ", ulasan)
 
             stopword_list = DataReader.get_stopword_list(stopword_list_path)
-            print(stopword_list)
             ulasan = Preprocessing.stopword_removal(ulasan, stopword_list)
             print("finsihed stopword_removal:", ulasan)
 
