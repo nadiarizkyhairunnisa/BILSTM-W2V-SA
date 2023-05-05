@@ -23,6 +23,7 @@ class DemoController extends Controller
             'preproc' => $request->radioPreproc,
             'model' => $request->radioModel,
         ];
+
         $formData = http_build_query($postData);
         $headers = [
             'Content-Type' => 'application/x-www-form-urlencoded',
